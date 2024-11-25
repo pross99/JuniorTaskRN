@@ -4,11 +4,11 @@ Small howto:
 
 1.git clone https://github.com/pross99/JuniorTaskRN.git
 
-2.cd server
+2. cd to server directory
 
-3.npm install
+3. "npm install" in terminal
 
-4.node server.js
+4. "node server.js" in terminal
 
 5. Back-end now running on port 5000
    
