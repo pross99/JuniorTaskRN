@@ -3,15 +3,50 @@
   top: 0;
   right: 0;
   width: 300px;
-  height: 100vh;
+
+  height: 95vh;
   background: gainsboro;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  overflow-y: scroll;
+  padding: 20px;
+  }
+
+.basket-card-container {
+  padding: 16px;
+
+}
+  .basket-grid-container {
+    right: 0;
+ }
+
+ .basket-details {
+  display: block;
+  flex-direction: row;
+ }
+
+ .basket-poster {
+  width: 100%;
+  height: 200px;
+  
+ }
+
+ .basket-poster img {
+    width: 100%;
+    height: 200px;
+ }
+
+ .basket-card {
+  padding-bottom: 10px;
+ }
+
+ .basket-checkout {
+  top: 0;
+  right: 0;
+  height: 10vh;
+  background: gold;
   box-shadow: -2px 0 10px rgba(0,0,0,0.1);
   z-index: 1000;
   overflow-y: auto;
   padding: 20px;
-  }
-
-
-  .basket-grid-container {
-    right: 0;
  }

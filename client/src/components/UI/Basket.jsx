@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 function Basket () {
-    const {basketItems,removeFromBasket} = useContext(BasketContext)
+    const {basketItems,removeFromBasket,placeOrder} = useContext(BasketContext)
 
     // Calculate total price of items
     const totalCost = basketItems.reduce((total, item) => total + item.Price, 0)
@@ -14,7 +14,7 @@ function Basket () {
 
     
     <div className='basket-card-container'>
-        <div className='basket-card-header'>
+        <div className='basket-card-header'> </div>
             <span> You have ({basketItems.length}) in your basket!</span>
     {basketItems && basketItems.length > 0 ? (
         <div className='basket-grid-container'>
@@ -42,12 +42,18 @@ function Basket () {
                         </div>
                     </div>
                 </div>
+                
        ))}
+       <div ></div>
+       <div className='basket-checkout'> Total cost: ${totalCost}
+        <button className='basket-checkout-button' onClick={() => placeOrder(basketItems)}>
+             </button>  
+        </div>
   </div>
     ) : (
         <div>Basket empty</div> // baskeet empty
     )}
-    </div>
+   
     </div>
   )
 }

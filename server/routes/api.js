@@ -14,16 +14,12 @@ router.get('/products', (req,res) => {
 let orderVariable = [];
 
 router.post('/place-order', (req,res) => {
+   console.log(req.body)
+    const basketItems = req.body.basketItems;
 
-if (Array.isArray(req.body)) {
-    orderVariable.push(...req.body) // spreading the items into ordervariable
-} else {
-    orderVariable.push(req.body)
-}
+    console.log("you have ordered the following items", basketItems)
 
-    console.log("you have ordered the following items", orderVariable)
-
-    res.status(201).json({message: 'Order stored successfully!', orderVariable: orderVariable})
+    res.status(201).json({message: 'Order stored successfully!', placedOrder: basketItems})
 
 
     

@@ -7,6 +7,8 @@ const cors = require("cors") // cors middleware for cors issue from localhost
 
 app.use(express.json()); // Parse JSON bodies
 app.use(cors()); // enable cors for all routes
+app.use(express.urlencoded({ extended: true }));
+
 
 // Routes
 app.use('/api', apiRoutes);
