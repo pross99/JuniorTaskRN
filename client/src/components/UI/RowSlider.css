@@ -178,6 +178,10 @@
     font-weight: 600;
     font-size: 1.1rem;
   }
+
+  .item-basket {
+    cursor: pointer; /* Pointer cursor on hover */
+  }
   
   /* For better Paper component integration */
   .MuiPaper-root {

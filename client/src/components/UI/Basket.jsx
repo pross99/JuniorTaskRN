@@ -47,6 +47,7 @@ function Basket () {
        <div ></div>
        <div className='basket-checkout'> Total cost: ${totalCost}
         <button className='basket-checkout-button' onClick={() => placeOrder(basketItems)}>
+            Place order
              </button>  
         </div>
   </div>
